@@ -4,7 +4,7 @@ import Home from "../assets/img/Group 1000002749.png"
 const Sidebar = () => {
     const [open, setOpen] = useState(true);
     return (
-        <div className={`${open ? "w-[20%]" : "w-[5%]"} border-solid border-r-[1px] border-[#E8E8E8] h-[100vh] py-[1.5%] relative sidebar duration-300`}>
+        <div className={`${open ? "w-[20%] min-w-[200px]" : "w-[5%] min-w-[64px]"} border-solid border-r-[1px] border-[#E8E8E8] h-[100vh] py-[1.5%] relative sidebar duration-300 float-left`}>
             <img className="w-[50px] h-[50px] mx-auto" src={Home} />
             <ul className={`${!open ?"pl-[10%]":"px-[10%]"}  py-[7%] font-medium roboto text-[#42526E]`}>
                 <li className={`${!open && "text-center"} cursor-pointer group/a py-3`}>

@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div>
-      {<Sidebar/>}
+      {<Homepage/>}
     </div>
   );
 }
