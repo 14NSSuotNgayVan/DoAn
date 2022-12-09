@@ -43,23 +43,43 @@ table{
   border-collapse: collapse;
 
 }
-table td, table th {
+table td,table th{
   border: 1px solid #ddd;
   padding: 8px;
+  position:relative;
 }
 
-table tr:nth-child(even){background-color: #f2f2f2;}
-
-table tr:hover {background-color: #ddd;}
-
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
+.seperate::after{
+  content:"";
+  border-right: 1px solid #ddd;
+  position: absolute;
+  height: 70%;
+  top: 0;
+  right: 0;
+  transform:translateY(25%);
 }
-
+.scroll {
+  overflow-y: scroll;
+}
+.scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    float: right;
+  }
+.scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+  }
+.scroll::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+.scroll::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+  }
+.scroll::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+  }
 @keyframes Dropdown{
   from {
     transform: translateY(-50px);
@@ -71,4 +91,7 @@ table th {
 
 .animate-dropdown{
   animation: Dropdown 0.4s ease-in-out;
+}
+.modal-blur{
+  background: rgba(66, 82, 110, 0.4);
 }

@@ -15,28 +15,9 @@ function App() {
   
   const token = localStorage.getItem("token");
 
-  useEffect(()=>{
-    axios.get('https://api.huuhieu.name.vn/products',{
-      params: {
-        page: page,
-        size: size
-      },
-      data: {
-
-      }
-    }).then(response=>{
-      const responseData = response.data
-      setData(responseData.data);
-     const totalRecord = responseData.totalRecord;
-    //  Tính số trang: totalRecord/size
-      setTotalPage(Math.ceil(totalRecord/size));
-
-    })
-  },[page])
-
   return (
     <div>
-      {<Homepage/>}
+      <Homepage/>
     </div>
   );
 }
