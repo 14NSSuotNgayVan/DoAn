@@ -1,6 +1,15 @@
 import { useEffect, useState } from 'react';
-const UpdateAndDelete =()=>{
+import axios from "axios";
+const UpdateAndDelete =(props)=>{
+    const {value, idn} = props;
     const [open,setOpen] = useState(false);
+
+    const headers ={
+        Authorization:'Bearer '+localStorage.getItem("token"),
+    };
+    const upDate = ()=>{
+    }
+
     return(
         <div className={`group`}>
             <svg className={`inline-block group-hover:bg-[#F0F7FF]`} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

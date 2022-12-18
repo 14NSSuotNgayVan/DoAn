@@ -95,3 +95,7 @@ table td,table th{
 .modal-blur{
   background: rgba(66, 82, 110, 0.4);
 }
+
+.pagination-active{
+  border:1px solid #1890FF;
+}
